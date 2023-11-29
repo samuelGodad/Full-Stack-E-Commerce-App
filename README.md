@@ -23,5 +23,5 @@ This is a full-stack e-commerce application built with Java Servlets, JSP, HTML,
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/e-commerce-app.git
+   git clone https://github.com/samuelGodad/e-commerce-app.git
    cd e-commerce-app
