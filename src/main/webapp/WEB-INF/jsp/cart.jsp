@@ -1,9 +1,12 @@
 <%@ page import="com.sami.ecommerceapplication.model.User" %>
+<<<<<<< HEAD
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.sami.ecommerceapplication.model.Cart" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.sami.ecommerceapplication.dao.ProductDao" %>
 <%@ page import="com.sami.ecommerceapplication.connection.DataBaseConnector" %>
+=======
+>>>>>>> bdd7566f434dd920b6db36f8161d681cd9e08bf6
 <%--
   Created by IntelliJ IDEA.
   User: Sami
@@ -15,6 +18,7 @@
     User auth = (User) request.getSession().getAttribute("auth");
     if (auth != null) {
         request.setAttribute("auth", auth);
+<<<<<<< HEAD
     }
     ArrayList<Cart> cart_list = (ArrayList<Cart>) request.getSession().getAttribute("cart_list");
     List<Cart> cartProducts = null;
@@ -23,6 +27,8 @@
         cartProducts = productDao.getAllCartProducts(cart_list);
         request.setAttribute("cart_list", cart_list);
 
+=======
+>>>>>>> bdd7566f434dd920b6db36f8161d681cd9e08bf6
     }
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -47,6 +53,7 @@
         </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
         <%
             if (cartProducts != null) {
                 for (Cart cart : cartProducts) {%>
@@ -62,10 +69,25 @@
                         <a href="" class="btn  btn-incr "><i class="fa fa-minus-square"></i></a>
                         <input type="text" name="quantity" value="1" class="form-control" readonly>
                         <a href="" class="btn btn btn-decr"><i class="fa fa-plus-square"></i></a>
+=======
+        <tr>
+            <td>Women Shoes</td>
+            <td>Shoes</td>
+            <td>45$</td>
+            <td>
+                <form action="" method="post" class="form-inline">
+
+                    <input type="hidden" name="id" value="1" class="form-input">
+                    <div class="form-group d-flex justify-content-between">
+                        <a href="#" class="btn  btn-incr "><i class="fa fa-minus-square"></i></a>
+                        <input type="text" name="quantity" value="1" class="form-control" readonly>
+                        <a class="btn btn btn-decr"><i class="fa fa-plus-square"></i></a>
+>>>>>>> bdd7566f434dd920b6db36f8161d681cd9e08bf6
                     </div>
                 </form>
 
             </td>
+<<<<<<< HEAD
             <td><a href="#" class="btn btn-danger"> Remove </a>
             <td>
         </tr>
@@ -74,6 +96,11 @@
             }
         %>
 
+=======
+            <td><a href="#" class="btn btn-danger">Remove</a>
+            <td>
+        </tr>
+>>>>>>> bdd7566f434dd920b6db36f8161d681cd9e08bf6
         </tbody>
     </table>
 </div>
