@@ -1,0 +1,9 @@
+.btn-incr, .btn-decr {
+    box-shadow: none;
+    font-size: 25px;
+
+}
+
+.table ,tbody, td {
+    align-content: center;
+}
