@@ -12,13 +12,9 @@ public class ProductDao {
 	private String query;
 	private PreparedStatement preparedStatement;
 	private ResultSet resultSet;
-
 	public ProductDao(Connection connection) {
 		this.connection = connection;
-
-
 	}
-
 	public List<Product> getAllProducts() {
 		List<Product> products = new ArrayList<Product>();
 		try {
