@@ -29,8 +29,7 @@ public class AddToCartServlet extends HttpServlet {
 			if (cart_list == null) {
 				cartList.add(cart);
 				session.setAttribute("cart_list", cartList);
-				out.println("<h1>the cart is added to the cart list</h1>");
-				System.out.println("the cart is added to the cart list");
+				response.sendRedirect("index");
 			} else {
 				cartList = cart_list;
 				boolean isProductFound = false;

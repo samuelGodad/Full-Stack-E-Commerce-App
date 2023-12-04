@@ -18,7 +18,7 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cart">carts</a>
+                    <a class="nav-link" href="cart">carts<span class ="badge badge-danger">${cart_list.size()}</span></a>
                 </li>
                 <%
                     if (auth != null) {%>
