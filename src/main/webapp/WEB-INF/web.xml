@@ -12,11 +12,11 @@
         <url-pattern>/add-to-cart</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>HelloServlet</servlet-name>
+        <servlet-name>Home</servlet-name>
         <jsp-file>/WEB-INF/jsp/index.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
+        <servlet-name>Home</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     <servlet>
@@ -66,5 +66,13 @@
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/css/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <jsp-file>/WEB-INF/jsp/addsuccess.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/success</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -18,11 +18,11 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cart">carts</a>
+                    <a class="nav-link" href="cart">Carts<span class ="badge badge-danger">${cart_list.size()}</span></a>
                 </li>
                 <%
                     if (auth != null) {%>
-                <li class="nav-item"><a class="nav-link disabled" href="order"> orders </a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="order"> Orders </a></li>
                 <li class="nav-item"><a class="nav-link disabled" href="log_out"> LogOut </a></li>
 
                 <%} else {%>
