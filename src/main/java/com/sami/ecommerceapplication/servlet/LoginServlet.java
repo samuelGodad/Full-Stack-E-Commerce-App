@@ -11,13 +11,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet(name = "LoginServlet", value = "/user_login")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.sendRedirect("login.jsp");
-	}
-
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
@@ -30,7 +25,7 @@ public class LoginServlet extends HttpServlet {
 			User user = userDao.userLogin(email, password);
 			if (user != null) {
 				request.getSession().setAttribute("auth", user);
-				response.sendRedirect("helloServlet");
+				response.sendRedirect(request.getContextPath() +"/");
 			} else {
 				out.println("login fail ");
 			}

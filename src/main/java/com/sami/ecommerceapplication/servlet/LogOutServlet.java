@@ -7,14 +7,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Objects;
 
-@WebServlet(name = "LogOutServlet", value = "/log_out")
+@WebServlet("/log_out")
 public class LogOutServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try (PrintWriter out = response.getWriter()) {
 			if (request.getSession().getAttribute("auth") != null) {
 				request.getSession().removeAttribute("auth");
-				response.sendRedirect("login");
+				response.sendRedirect("login_page");
 			} else {
 				// If not logged in, redirect back to the referring page
 				String referer = request.getHeader("referer");

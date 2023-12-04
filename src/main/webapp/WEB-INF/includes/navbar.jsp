@@ -26,7 +26,7 @@
                 <li class="nav-item"><a class="nav-link disabled" href="log_out"> LogOut </a></li>
 
                 <%} else {%>
-                <li class="nav-item"><a class="nav-link disabled" href="login"> Login </a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="login_page"> Login </a></li>
                 <%
                     }
                 %>

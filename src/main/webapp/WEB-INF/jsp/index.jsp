@@ -1,6 +1,7 @@
 <%@ page import="com.sami.ecommerceapplication.connection.DataBaseConnector" %>
 <%@ page import="com.sami.ecommerceapplication.model.User" %>
 <%@ page import="com.sami.ecommerceapplication.model.Product" %>
+<%@ page import="com.sami.ecommerceapplication.servlet.pagedispatcher.PageDispatcherServlets" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.sami.ecommerceapplication.dao.ProductDao" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>

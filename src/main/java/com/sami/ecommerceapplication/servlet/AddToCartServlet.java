@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(name = "AddToCartServlet", value = "/add-to-cart")
+@WebServlet("/add-to-cart")
 public class AddToCartServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -16,8 +16,6 @@ public class AddToCartServlet extends HttpServlet {
 			// Retrieve the product ID from the request parameter
 			int id = Integer.parseInt(request.getParameter("id"));
 			ArrayList<Cart> cartList = new ArrayList<>();
-
-
 			// Create a Cart object representing the product with quantity 1
 			Cart cart = new Cart();
 			cart.setId(id);
@@ -29,7 +27,7 @@ public class AddToCartServlet extends HttpServlet {
 			if (cart_list == null) {
 				cartList.add(cart);
 				session.setAttribute("cart_list", cartList);
-				response.sendRedirect("index");
+				response.sendRedirect(request.getContextPath() + "/");
 			} else {
 				cartList = cart_list;
 				boolean isProductFound = false;
@@ -45,12 +43,11 @@ public class AddToCartServlet extends HttpServlet {
 				if (!isProductFound) {
 					cartList.add(cart);
 					session.setAttribute("cart_list", cartList);
-					response.sendRedirect("index");
+					response.sendRedirect(request.getContextPath() + "/");
 				}
 			}
 		}
 	}
-
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// This servlet does not handle POST requests, so this method is empty

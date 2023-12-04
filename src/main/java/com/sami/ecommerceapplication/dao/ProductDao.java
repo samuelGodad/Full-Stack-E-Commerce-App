@@ -64,4 +64,24 @@ public class ProductDao {
 		}
 		return cartProducts;
 	}
+	public double totalCartPrice(ArrayList<Cart> cartList) {
+		double total = 0;
+
+		try {
+			if (cartList.size() > 0) {
+				for (Cart item : cartList) {
+					query = "select * from products where product_id =?";
+					preparedStatement = this.connection.prepareStatement(query);
+					preparedStatement.setInt(1, item.getId()); // Set the parameter value
+					resultSet = preparedStatement.executeQuery();
+					while (resultSet.next()) {
+						total += resultSet.getDouble("price") * item.getQuantity();
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return total;
+	}
 }

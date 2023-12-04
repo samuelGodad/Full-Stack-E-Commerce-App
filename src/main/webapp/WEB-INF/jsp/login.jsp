@@ -27,7 +27,7 @@
             User Login
         </div>
         <div class="card-body">
-            <form action = "user_login" method="post">
+            <form action = "login" method="post">
                 <!-- Email Input Group -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
