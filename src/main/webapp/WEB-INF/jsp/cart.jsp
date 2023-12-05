@@ -46,7 +46,7 @@
 <div class="container">
     <div class="d-flex py-3">
         <h3>Total Price : $ ${total_price > 0 ? decimalFormat.format(total_price) :0}</h3>
-        <a href="#" class="mx-3 btn btn-primary">Checkouts</a>
+        <a href="check_out" class="mx-3 btn btn-primary">Checkouts</a>
     </div>
     <table class="table table-long">
         <thead>

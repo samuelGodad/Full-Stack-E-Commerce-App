@@ -38,7 +38,7 @@
                     <h6 class="category">Category :<%= product.getCategory() %></h6>
                     <div class="mt-3 d-flex justify-content-between">
                         <a href="add-to-cart?id=<%=product.getId()%>" class="btn btn-dark">Add to Cart</a>
-                        <a href="order_now" class="btn btn-primary">Buy Now</a>
+                        <a href="order_now?quantity=1&id=<%=product.getId()%>" class="btn btn-primary">Buy Now</a>
                     </div>
                 </div>
             </div>

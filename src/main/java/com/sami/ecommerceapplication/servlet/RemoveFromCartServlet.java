@@ -18,9 +18,6 @@ public class RemoveFromCartServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			String id = request.getParameter("id");
-//			HttpSession session = request.getSession();
-//			session.removeAttribute("cart_" + id);
-//			response.sendRedirect("cart");
 			if(id != null){
 				ArrayList<Cart> cartList = (ArrayList<Cart>) request.getSession().getAttribute("cart_list");
 				for (Cart cart : cartList) {
