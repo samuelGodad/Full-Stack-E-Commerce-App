@@ -73,18 +73,5 @@ public class PageDispatcherServlets extends HttpServlet {
 			throw new RuntimeException(e);
 		}
 	}
-	protected void doRoute(HttpServletRequest request, HttpServletResponse response) {
-		String uri = request.getRequestURI();
-		switch (uri) {
-			case "/":
-				showHomePage(request, response);
-				break;
-			case "/login_page":
-				showLoginPage(request, response);
-				break;
-			default:
-				showHomePage(request, response);
-				break;
-		}
-	}
+
 }
